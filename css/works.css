@@ -1,0 +1,333 @@
+@charset "utf-8";
+
+  *{
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background-color: #F5F3EE;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  body::-webkit-scrollbar{
+    display:none;
+  }
+
+  header {
+    position: relative;
+    /*background-image: url("../images/picture/footbath-bg.png");*/
+    background-size: cover;
+    height: 85vh;
+  }
+  
+  header nav {
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    z-index: 1;
+  }
+  
+  header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header li {
+    margin: 0 20px;
+  }
+  
+  header a {
+    text-decoration: none;
+    color: #fff;
+    font-family: "miller-banner", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+  }
+
+  .header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: "miller-banner", serif;
+    font-size: 40px;
+    color: #fff;
+  }
+
+  .gnavi{
+    display: flex;
+    flex-wrap: wrap;
+    margin:0 0 0 0;
+    list-style: none;
+  }
+
+  .gnavi li a{
+    display: block;
+    padding:10px 30px;
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  .gnavi li{
+    margin-bottom:20px;
+  }
+
+  .gnavi li a{
+	position: relative;
+  }
+
+  .gnavi li.current a,
+  .gnavi li a:hover{
+	color:#ffffff;
+  }
+
+  .gnavi li a::after {
+    content: '';
+    position: absolute;
+    bottom: 1%;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background:#ffffff;
+    transition: all .3s;
+    transform: scale(0, 1);
+    transform-origin: left top;
+  }
+
+  .slideshow {
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+  .slide {
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+
+  .slide:first-child {
+    opacity: 1;
+  }
+
+
+/*現在地とhoverの設定*/
+  .gnavi li.current a::after,
+  .gnavi li a:hover::after {
+    transform: scale(1, 1);
+  }
+
+  #back-to-top {
+    position: fixed;
+    bottom: 20px; /* 左下に表示するため、下からの距離を指定 */
+    left: 20px; /* 左下に表示するため、左からの距離を指定 */
+    display: none; /* 最初は非表示にしておく */
+    padding: 10px 15px;
+    font-family: "miller-banner", serif;
+    font-size: 14px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 100; /* 他の要素より上に表示するため、z-indexを高く設定 */
+  }
+
+  #back-to-top:hover {
+    background-color: #666;
+  }
+
+  .fadeIn{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 1s;
+  }
+
+  .fadeIn.is-show{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .headline{
+    margin-top: 250px;
+    font-family: "miller-banner", serif;
+    font-weight: 400;
+    font-size: 24px;
+    padding-left: 10%;
+  }
+
+  .concept{
+    margin-top: 50px;
+    padding-left: 15%;
+    font-family: "a-otf-ud-reimin-pr6n", sans-serif;
+    font-weight: 300;
+    color: #3f3f3f;
+  }
+
+  .describe{
+    font-size: 24px;
+  }
+
+  .process-right{
+    margin-top: 100px;
+    padding-left: 10%;
+    font-family: "a-otf-ud-reimin-pr6n", sans-serif;
+    font-weight: 300;
+    color: rgb(63, 63, 63);
+    display: flex;
+    position: relative;
+    margin-bottom: 350px;
+  }
+
+  .hoverImg{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+  }
+
+  .hoverImg-right{
+    position: absolute;
+    top: 20%;
+    right: 1%;
+  }
+
+  .process{
+    margin-top: 50px;
+  }
+
+  .flexTxt-left{
+    padding-right: 5%;
+    width: 40%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .result{
+    margin-top: 100px;
+    padding-left: 15%;
+    display: flex;
+    font-family: "a-otf-ud-reimin-pr6n", sans-serif;
+    font-weight: 300;
+    color: #3f3f3f;
+  }
+
+  .title{
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  .flex-right{
+    width: 50%;
+    padding-left: 10%;
+  }
+
+  .result-web{
+    padding-left: 5%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .result-web {
+    padding-left: 5%;
+    text-align: center;
+  }
+
+  .result-web img{
+    width: 80%;
+  }
+  
+  .result-web a {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .result-web a span:hover{
+    opacity: 0.7;
+  }
+
+  .center-txt{
+    padding-left: 15%;
+    font-family: "a-otf-ud-reimin-pr6n", sans-serif;
+    font-weight: 300;
+    color: #3f3f3f;
+    width: 80%;
+  }
+
+  .center-txt h3{
+    margin-top: 70px;
+  }
+
+  .works{
+    padding-left: 13%;
+    margin-bottom: 120px;
+  }
+
+  .works a{
+    display: block;
+    margin-bottom: 24px;
+    text-decoration: none;
+    color: rgb(63, 63, 63);
+    font-family: "a-otf-ud-reimin-pr6n", serif;
+    font-size: 24px;
+  }
+
+  .works a span {
+    display: inline-block; /* 追加 */
+  }
+
+  .works a span:hover {
+    color: #aaaaaa;
+  }
+
+  footer {
+    height: 150px;
+    background-color: #454545;
+  }
+
+  .footer{
+    display: flex;
+    padding-left: 15%;
+    padding-top: 2%;
+  }
+
+  footer p{
+    color: #ffffff;
+    font-family: "miller-banner", serif;
+    font-weight: 400;
+    margin: 0 20px;
+  }
+
+  .footer-menu ul {
+    padding-top: 15px;
+    list-style: none;
+    display: flex;
+  }
+  
+  .footer-menu li {
+    margin: 0 20px;
+  }
+  
+  .footer-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-family: "miller-banner", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+  }
+
