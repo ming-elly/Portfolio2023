@@ -272,6 +272,18 @@
     margin-top: 70px;
   }
 
+  .slider {
+    width: 80%;
+    margin: 0 auto;
+    padding-left: 5%;
+    position: relative;
+    box-sizing: border-box; /* パディングを含めて幅を計算 */
+  }
+  
+  .slider img{
+    width: 100%;
+  }
+
   .works{
     padding-left: 13%;
     margin-bottom: 120px;
