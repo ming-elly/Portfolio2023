@@ -20,6 +20,24 @@ $(document).ready(function(){
       fade: true,
       speed: 850
     });
-
-  });
-  
+    
+    $('.a4-slider').slick({
+      centerMode: true,
+      centerPadding: '60px',
+      slidesToShow: 3,
+      arrows: true,
+      prevArrow: '<button type="button" class="slick-prev">&laquo;</button>',
+      nextArrow: '<button type="button" class="slick-next">&raquo;</button>',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  });  

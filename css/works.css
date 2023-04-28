@@ -284,8 +284,44 @@
     width: 100%;
   }
 
+  .a4-slider {
+    max-width: 1200px; /* A4 paper width at 96dpi */
+    margin: 0 auto;
+  }
+  
+  .r-slide {
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
+  
+  .r-slide img {
+    max-width: 80%;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .a4-slider .slick-slide {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+  }
+  
+  .a4-slider .slick-slide.slick-current {
+    opacity: 1;
+  }
+
+  .slick-prev:before, 
+  .slick-next:before {
+    color: #666 !important;
+  }
+
+
   .top{
     margin-top: 200px;
+  }
+
+  .bottom{
+    margin-bottom: 200px;
   }
 
   .works{
