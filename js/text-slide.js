@@ -1,4 +1,4 @@
-const messages = ['おはよう', 'こんにちは', 'こんばんは'];
+const messages = ['Hello.', 'こんにちは.', '안녕하세요.', 'สวัสดีครับ.', 'สวัสดีค่ะ.', '	Bonjour.', 'Guten Tag.', 'Dobrý den'];
 let currentIndex = 0;
 const messageElement = document.getElementById('message');
 
